@@ -1,0 +1,537 @@
+(function(FS) {
+  var session = FS.getCurrentSession(), sessionUrl = FS.getCurrentSessionURL();
+  function retryWithBackoff(condition, callback, maxWait, failureMsg, timeoutCallback) {
+    var totalTimeExpired = 0;
+    var wait = 64;
+    var resultFn = function() {
+      if (condition()) {
+        callback();
+        return;
+      }
+      wait = Math.min(wait * 2, 1024);
+      if (totalTimeExpired > maxWait) {
+        FS.log('warn', failureMsg);
+        !!timeoutCallback && timeoutCallback(failureMsg);
+        return;
+      }
+      totalTimeExpired += wait
+      setTimeout(resultFn, wait);
+    };
+    return resultFn;
+  }
+  function loadSession(key) {
+	var lastSession = window['localStorage'].getItem(key);
+    if (!lastSession) {
+      lastSession = FS._cookies()[key];
+    }
+    return lastSession
+  }
+  function saveSession(key, session) {
+    window['localStorage'].setItem(key, session);
+  }
+
+	window['_dlo_appender'] = 'fullstory';
+	window['_dlo_logLevel'] = -1;
+	window['_dlo_beforeDestination'] = [{ name: 'convert', enumerate: true, index: -1 },{ name: 'suffix' },{ name: 'insert', value: 'dlo', position: -1 }];
+	window['_dlo_previewMode'] = false;
+	window['_dlo_readOnLoad'] = true;
+	window['_dlo_validateRules'] = true;
+
+	window['_dlo_rules_adobe_am'] = [];
+	window['_dlo_rules_ceddl'] = [
+    {
+      "id": "fs-event-ceddl-cart", "source": "digitalData.cart",
+      "operators": [
+        { "name": "query", "select": "$[!(item)]" },
+        { "name": "flatten" },
+        { "name": "insert", "value": "cart" }
+      ],
+      "destination": "FS.event"
+    },
+    {
+      "id": "fs-event-ceddl-cart-item", "source": "digitalData.cart.item",
+      "readOnLoad": false,
+      "operators": [
+        { "name": "query", "select": "$[!(linkedProduct)]" },
+        { "name": "insert", "value": "cart_item" },
+      ],
+      "destination": "FS.event",
+    },
+    {
+      "id": "fs-event-ceddl-page", "source": "digitalData.page",
+      "operators": [
+        { "name": "flatten" },
+        { "name": "query", "select": "$[!(destinationURL,referringURL)]" },
+        { "name": "convert","properties": "issueDate,effectiveDate,expiryDate", "type": "date" },
+        { "name": "insert", "value": "page" }
+      ],
+      "destination": "FS.event"
+    },
+    {
+      "id": "fs-event-ceddl-product", "source": "digitalData.product[0]",
+      "operators": [
+        { "name": "query", "select": "$[!(linkedProduct)]" },
+        { "name": "flatten" },
+        { "name": "insert", "value": "product" }
+      ],
+      "destination": "FS.event"
+    },
+    {
+      "id": "fs-event-ceddl-transaction", "source": "digitalData.transaction",
+      "operators": [
+        { "name": "query", "select": "$[!(profile,item)]" },
+        { "name": "flatten" },
+        { "name": "insert", "value": "transaction" }
+      ],
+      "destination": "FS.event"
+    },
+    {
+      "id": "fs-event-ceddl-event", "source": "digitalData.event",
+      "operators": [
+        { "name": "flatten" },
+        { "name": "insert", "select": "eventName", "defaultValue": "event" }
+      ],
+      "destination": "FS.event"
+    }
+  ]
+  ;
+	window['_dlo_rules_google_ec'] = [];
+	window['_dlo_rules_google_em'] = [];
+	window['_dlo_rules_tealium_retail'] = [];
+	try {
+		window['_dlo_rules_custom'] = [
+  {
+    "id": "fs-event-adobe-evars",
+    "source": "s[^(eVar)]",
+    "operators": [
+      {
+        "name": "insert",
+        "value": "eVars"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-tcp-identify",
+    "url": ".*tatadigital.*/homepage",
+    "source": "digitalData.customer",
+    "operators": [
+      {
+        "name": "query",
+        "select": "$[(tcpId)]"
+      },
+      {
+        "name": "insert",
+        "select": "tcpId"
+      }
+    ],
+    "destination": "FS.identify"
+  },
+  {
+    "id": "fs-adobe-events",
+    "source": "s[^(event)]",
+    "operators": [
+      {
+        "name": "insert",
+        "value": "events"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-ga-event-bb",
+    "url": ".*bigbasket.com.*",
+    "source": "dataLayer",
+    "operators": [
+      {
+        "name": "query",
+        "select": "$[?(event)]"
+      },
+      {
+        "name": "query",
+        "select": "$[?(event!^gtm)]"
+      },
+      {
+        "name": "query",
+        "select": "$[?(event!^optimize)]"
+      },
+      {
+        "name": "query",
+        "select": "$[?(event!^scroll)]"
+      },
+      {
+        "name": "query",
+        "select": "$[?(ecommerce=undefined)]"
+      },
+      {
+        "name": "insert",
+        "select": "event"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-ga-event-fb_flight",
+    "url": ".*airasia.co.in.*",
+    "source": "dataLayer",
+    "operators": [
+      {
+        "name": "query",
+        "select": "$[?(event=^fb_flight)]"
+      },
+      {
+        "name": "query",
+        "select": "$[(event,productInfo)]"
+      },
+      {
+        "name": "flatten"
+      },
+      {
+        "name": "insert",
+        "select": "event"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-ga-event-fb_proceed",
+    "url": ".*airasia.co.in.*",
+    "source": "dataLayer",
+    "operators": [
+      {
+        "name": "query",
+        "select": "$[?(event=^fb_proceed)]"
+      },
+      {
+        "name": "query",
+        "select": "$[(event,guestInfo,productInfo)]"
+      },
+      {
+        "name": "flatten"
+      },
+      {
+        "name": "insert",
+        "select": "event"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-ga-event-fb_flightCheck",
+    "url": ".*airasia.co.in.*",
+    "source": "dataLayer",
+    "operators": [
+      {
+        "name": "query",
+        "select": "$[?(event=^fb_flightCheck)]"
+      },
+      {
+        "name": "query",
+        "select": "$[(event,checkinInfo)]"
+      },
+      {
+        "name": "flatten"
+      },
+      {
+        "name": "insert",
+        "select": "event"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-cpj-event",
+    "url": ".*tata.*",
+    "source": "digitalData[^(cpj)]",
+    "operators": [
+      {
+        "name": "insert",
+        "value": "product"
+      }
+    ],
+    "destination": "FS.event"
+  },
+  {
+    "id": "fs-croma-product-event",
+    "url": ".*croma.*",
+    "source": "digitalData[^(product)]",
+    "operators": [
+      {
+        "name": "flatten"
+      },
+      {
+        "name": "insert",
+        "value": "product"
+      }
+    ],
+    "destination": "FS.event"
+  },
+{
+  "id": "city-user-var",
+  "source": "dataLayer",
+"url": ".*bigbasket.com.*",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$[?(city)]"
+    },
+    {
+      "name": "query",
+      "select": "$[(city)]"
+    },
+    {
+      "name": "rename",
+      "properties": {
+        "city": "big_basket_city"
+      }
+    }
+  ],
+  "destination": "FS.setUserVars"
+},
+{
+  "id": "fs-ua-e-commerce-detail-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.detail.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "detail"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-detail-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.detail.products[0]"
+    },
+    {
+      "name": "insert",
+      "value": "detail_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-click-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.click.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "click"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-click-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.click.products[0]"
+    },
+    {
+      "name": "insert",
+      "value": "click_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-add-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.add.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "add"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-add-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.add.products[0]"
+    },
+    {
+      "name": "insert",
+      "value": "add_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-remove-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.remove.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "remove"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-remove-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.remove.products[0]"
+    },
+    {
+      "name": "insert",
+      "value": "remove_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-checkout-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.checkout.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "checkout"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-checkout-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.checkout.products"
+    },
+    {
+      "name": "fan-out"
+    },
+    {
+      "name": "insert",
+      "value": "checkout_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-purchase-action",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.purchase.actionField"
+    },
+    {
+      "name": "insert",
+      "value": "purchase"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-purchase-product",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.purchase.products"
+    },
+    {
+      "name": "fan-out"
+    },
+    {
+      "name": "insert",
+      "value": "purchase_product"
+    }
+  ],
+  "destination": "FS.event"
+},
+{
+  "id": "fs-ua-e-commerce-order-completed",
+  "source": "dataLayer",
+  "operators": [
+    {
+      "name": "query",
+      "select": "$.ecommerce.purchase"
+    },
+    {
+      "name": "insert",
+      "value": "Order Completed"
+    }
+  ],
+  "destination": "FS.event"
+}];
+	} catch (err) {
+		console.error('FullStory custom rules error; review DLO integration\'s custom rules.');
+	}
+
+	var dloScriptTag = document.createElement('script');
+	dloScriptTag.type = 'text/javascript';
+	dloScriptTag.async = true;
+	dloScriptTag.src = 'https://edge.fullstory.com/datalayer/v1/latest.js';
+
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(dloScriptTag,firstScriptTag);
+	
+  function runIntercept() {
+    try {
+      QSI.API.load()
+      QSI.API.run()
+      FS('stat', {
+        eventType: 'INTEGRATION_INITIALIZED',
+        payload: {
+          provider_id: 'qualtrics',
+          event_status: 'SUCCESS'
+        }
+      });
+    } catch(e) {
+      console.warn(e);
+      FS.log("warn", "Failed to load or run QSI.API, please check your Qualtrics configuration.");
+      FS('stat', {
+        eventType: 'INTEGRATION_INITIALIZED',
+        payload: {
+          provider_id: 'qualtrics',
+          event_status: 'FAILURE',
+          metadata: {
+            detail: 'Failed to load or run QSI.API, please check your Qualtrics configuration.'
+          }
+        }
+      });
+    }
+  }
+
+  if(typeof window.QSI !== 'undefined') {
+    runIntercept();
+  } else {
+    window.addEventListener("qsi_js_loaded", runIntercept, false);
+  }
+
+})(window['_fs_namespace'] ? window[window['_fs_namespace']] : window['FS'])

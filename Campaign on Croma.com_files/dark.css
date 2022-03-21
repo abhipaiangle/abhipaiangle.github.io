@@ -1,0 +1,1271 @@
+:root {
+    --navbar-carousel-color: #353535;
+    --text-color: #ffffff;
+    --croma-wall: #121212;
+    --old-price: #9a9a9a;
+    --foot-color: #1d1d1d;
+    --hyperlink: #00c09e;
+    --circle: #808080;
+    --input-color: #333;
+    --neon-green: #00e9bf;
+}
+
+.dark-theme,
+.dark-theme .viewall-btn-wrap .btn-secondary,
+.dark-theme .viewall-btn-wrap .btn-secondary:hover,
+.dark-theme #cpMsd,
+.dark-theme .cp-listing .two-col-rignt .sidebar,
+.dark-theme .deliver-container,
+.dark-theme .cp-cart .cart-price,
+.dark-theme .MuiPaper-root,
+.dark-theme .btn.btn-secondary:hover,
+.dark-theme .search-wrap .text-input,
+.dark-theme .cp-account-item-card .icon,
+.dark-theme .service-icon,
+.dark-theme .btn-secondary,
+.dark-theme #add_to_cart_footer_container,
+.dark-theme .select-item-list,
+.dark-theme .cp-listing .two-col-rignt .sidebar .filter-by .title.show-on-mobile,
+.dark-theme .cp-tab.typ-rounded .MuiTab-root,
+.dark-theme .nav-list *,
+.dark-theme .cp-payment .amount-offer-wrap .p-amount,
+.dark-theme .bs-header .bottom-band .navbar,
+.dark-theme .cp-dropdown .dropdown-list,
+.cp-dropdown .dropdown-list::before,
+.dark-theme .tabcontent,
+.dark-theme .menu-list,
+.dark-theme .nav-tab,
+.dark-theme .nav-tab::before,
+.dark-theme .cp-select .custom-select .select-item-list .item.selected,
+.dark-theme .exc-card,
+.dark-theme #mic-cam-msg,
+.dark-theme .MuiDialogContent-root .typ-store-detail div.swiper-slide
+/* .dark-theme .MuiDialogContent-root .card, */
+.dark-theme .displaysuccess,
+.dark-theme .modal-wrap,
+/* .dark-theme .plan-header, */
+.dark-theme .cp-store-locator .store-list .store-card,
+.dark-theme .store-list-slider .swiper-slide,
+.dark-theme .cp-payment .amount-offer-wrap .offer-wrap,
+.dark-theme .paymentOffer-scroll .modal-dock,
+.dark-theme .MuiDialogContent-root div.pdpSelectStore,
+.dark-theme .store-info-box-container,
+.dark-theme .cp-listing .two-col-rignt .sidebar .filter-by .cp-accordian,
+.dark-theme .offer-section-pdp .offer-box,
+.dark-theme .offer-section-pdp .offer-selected-pdp,
+.dark-theme .product-carousel-popup,
+.dark-theme .cp-offer,
+.dark-theme .tnc-header,
+.dark-theme .plan-cmp-banner,
+.dark-theme .qik-emi-table-section,
+.dark-theme .plan-cmp-bannerSdp,
+.dark-theme .plan-cmp th,
+.dark-theme .uploaded-image-dialog, .uploaded-image-dialog-tc,
+.dark-theme .recEW {
+    background: var(--croma-wall) !important;
+}
+
+.dark-theme .plan-header {
+    background: inherit !important;
+}
+
+.dark-theme .cp-category-nav {
+    background: var(--navbar-carousel-color);
+}
+.no-review,
+.dark-theme .cp-category-nav a,
+.dark-theme .nullsearch-category-list a,
+.dark-theme .sec-title,
+.dark-theme .think-title,
+.dark-theme .product-title,
+.dark-theme .amount,
+.dark-theme .think-link,
+.dark-theme .icon-wishlist,
+.dark-theme .content *,
+.dark-theme .bs-footer *,
+.dark-theme p.title,
+.dark-theme .text-big,
+.dark-theme .swiper-button-next::after,
+.dark-theme .swiper-button-prev::after,
+.dark-theme .swiper-button-next-bank::after,
+.dark-theme .swiper-button-prev-bank::after,
+.dark-theme .cp-cart .cp-product .product-wrap .product-info .product-id,
+.dark-theme .cp-cart .cp-product .product-wrap .product-info .price-qyt-wrap,
+.dark-theme .cp-cart .cp-product .product-wrap .product-info .price-qyt-wrap .number,
+.dark-theme .main-text, .dark-theme .main-text-available,
+.dark-theme .cp-sec-sideBar .side-bar .mod-summary .box-title,
+.dark-theme .mod-summary .payment-summary table tr td:first-child,
+.dark-theme .mod-summary .payment-summary table tr td:last-child,
+.dark-theme .mod-summary .payment-summary table tr.total td,
+.dark-theme .cp-checkbox .cp-checkbox-item input[type=checkbox]:not(old)+label .text,
+.dark-theme .cp-price .new-price,
+.dark-theme .cp-cart .cart-price .price-wrap .name,
+.dark-theme .shipping-heading-name,
+.dark-theme .delivery-pickup-text,
+.dark-theme .chk-section-title,
+.dark-theme .home-store,
+.dark-theme .billing-address-font,
+.dark-theme .cp-checkout .checkout-list .checkout-item .cp-box .box-title,
+.dark-theme .form-group .lbl-title,
+.dark-theme .cp-checkout .checkout-list .checkout-item .cp-box.field-disabled .form-list .form-group .formControl,
+.dark-theme .cp-checkout .checkout-list .checkout-item .payment-summary table tr td:first-child,
+.dark-theme .cp-checkout .checkout-list .checkout-item .payment-summary table tr td:last-child,
+.dark-theme .cp-checkout .checkout-list .checkout-item .payment-summary table tr.total td,
+.dark-theme .cp-checkout .checkout-list .checkout-item.sec-sticky .summary .act-btn .rel-info,
+.dark-theme .cart-title,
+.dark-theme .total-price-below,
+.dark-theme .cp-accordian .accordian-item .MuiIconButton-label:before,
+.dark-theme .cp-payment .page-heading,
+.dark-theme .order-summary-title,
+.dark-theme .os-bold,
+.dark-theme .os-deliveryMode,
+.dark-theme .addressData,
+.dark-theme .cp-product.typ-plp,
+.dark-theme .cp-product.typ-plp .product-title a:hover,
+.dark-theme .cp-listing .two-col-rignt .sidebar .title,
+.dark-theme .cp-product,
+.dark-theme .cp-payment .amount-offer-wrap .p-amount,
+.dark-theme .cp-form,
+.dark-theme .form-group .lbl-title,
+.dark-theme .cp-listing .two-col-rignt .cat-title-wrap .cat-title,
+.dark-theme .cp-product .product-desc, .cp-product .product-id,
+.dark-theme .cp-select .custom-select .selected-item,
+.dark-theme .cp-accordian.typ-sm .accordian-item .accorian-title,
+.dark-theme .cp-listing .two-col-rignt .sidebar .cp-checkbox .text,
+.dark-theme .cp-listing .two-col-rignt .search-wrap .text-input::placeholder,
+.dark-theme .offer-link .btn .btn-link,
+.dark-theme .page-title-wrap .page-title,
+.dark-theme .cp-account-item-card .item-title,
+.dark-theme .cp-account-item-card .item-desc,
+.dark-theme .cp-address .address-list .name-wrap,
+.dark-theme .cp-address .address-list .address address,
+.dark-theme .cp-address .address-list .set-default .add-type,
+.dark-theme .cp-my-orders .cp-card .order-list .order-list-item .cp-product .action-wrap a,
+.dark-theme .cp-my-orders .cp-product .action-wrap .btn:last-child,
+.dark-theme .cp-my-orders .cp-product .product-info .price-qty-wrap,
+.dark-theme .cp-my-orders .cp-product .product-info .price-rating-wrap .cp-price .new-price,
+.dark-theme .cp-tab .MuiTab-wrapper,
+.dark-theme .tab-title-privilege-points,
+.dark-theme .cp-privilege .cp-remember *,
+.dark-theme .collecte-title,
+.dark-theme .cp-my-orders .cp-product .product-info .estimate,
+.dark-theme .cp-my-orders .cp-product .product-info .price-qty-wrap .number,
+.dark-theme .plp-page-footer-content *,
+.dark-theme .offer-band a,
+.dark-theme .cp-breadcrumb .list,
+.dark-theme .cp-breadcrumb .list a,
+.dark-theme .cp-rating .text,
+.dark-theme label .text,
+.dark-theme .cp-product-details .pd-title,
+.dark-theme .cp-product-details .pd-meta,
+.dark-theme .cp-product-details .pd-info,
+.dark-theme .extra-savings-text,
+.dark-theme .cp-product-details .info-title,
+.dark-theme .vas-header .info-title,
+.dark-theme .extend-protect,
+.dark-theme .info-text,
+.dark-theme .cp-accordian .accordian-item .accorian-title,
+.dark-theme .cp-overview *,
+.dark-theme .cp-specification *,
+.dark-theme .floating_text_style,
+.dark-theme .info-wrap .desc,
+.dark-theme .cp-review .info-wrap .cp-rating .date,
+.dark-theme .cp-listing .two-col-rignt .product-count,
+.dark-theme .offer-section-pdp *,
+.dark-theme .cp-checkbox-item a,
+.dark-theme .cp-my-account *,
+.dark-theme .cp-features .item,
+.dark-theme .cp-product .product-sub-title,
+.dark-theme .cp-info,
+.dark-theme .cp-info .btn.btn-link,
+.dark-theme .cp-wishlist .wishlist-list .wishlist-item .p-list .p-item .cp-product.typ-plp .add-date,
+.dark-theme .btn .btn-link .add-new,
+.dark-theme .view-more-container,
+.dark-theme .orderTxt,
+.dark-theme .orderColor,
+.dark-theme .order-location *,
+.dark-theme .tax-text,
+.dark-theme .exclude-out-of-stock-title,
+.dark-theme .select-item-list,
+.dark-theme .cp-select .custom-select .select-item-list .item.selected,
+.dark-theme .accordian-item .MuiIconButton-label::before,
+.dark-theme .cp-empty-img-text .title,
+.dark-theme .brand-page-footer-content *,
+.bs-header .bottom-band .navbar .footer-sec .copywrite,
+.dark-theme .bs-header .bottom-band .navbar .nav-item>.link,
+.dark-theme .menu-heading .icon,
+.dark-theme .tablinks .icon,
+.dark-theme .nav-list *,
+.dark-theme .cp-cart .cart-price .price-wrap .name .small,
+.dark-theme .view_all_offer button,
+.dark-theme .tnc-offer,
+.dark-theme .view_all_offer_text,
+.dark-theme .cart-total-item,
+.dark-theme .terms-cond-div,
+.dark-theme .gv-bal-div span,
+.dark-theme .mini-cart-style .product-title,
+.dark-theme .mini-cart-style .new-price .amount,
+.dark-theme .mini-cart-style .sec-title,
+.dark-theme .brand-page-footer-content *,
+.dark-theme .confirmation-modal-desc p,
+.dark-theme #menu-holder,
+.dark-theme .display-grid-template,
+.dark-theme .nav-heading,
+.dark-theme .delivery-title-store-pdp,
+.dark-theme .cp-pincode p,
+.dark-theme .cp-pincode .sub-title,
+.dark-theme .contentFont,
+.dark-theme .VoucherTxt,
+.dark-theme .cp-think .think-link,
+.dark-theme .pd-eligibility-wrap,
+.dark-theme .pd-eligibility-wrap,
+.dark-theme .cp-dropdown .dropdown-list,
+.dark-theme .logout-text,
+.dark-theme .bs-header .user-wrap .dropdown-list *,
+.dark-theme .tabcontent,
+.dark-theme #menu-holder,
+.dark-theme .nav-heading,
+.dark-theme .plp-prod-title,
+.dark-theme .upto-off,
+.dark-theme .chk-title,
+.dark-theme .plan-desc,
+.dark-theme .device-text-plan-date,
+.dark-theme .info-text-plan-date,
+.dark-theme .device-details-text,
+.dark-theme .my-plan-title,
+.dark-theme .plan-title-color,
+.dark-theme .device-sku-id,
+.dark-theme .orderNoColor,
+.dark-theme .Title-myorder,
+.dark-theme .cp-empty-img-text .decs .sub-title,
+.dark-theme .cp-empty-img-text .title-wrap,
+.dark-theme .searchCroma,
+.dark-theme .allCategories-txt,
+.dark-theme .device-text,
+.dark-theme .sr-sub-head,
+.dark-theme .stps,
+.dark-theme .stps-content,
+.dark-theme .sl-no,
+.dark-theme .cp-my-orders .order-location, .cp-my-orders .order-msg p,
+.dark-theme .delivery-mode-tiltle,
+.dark-theme .oc-address-details,
+.dark-theme .billing-container address,
+.dark-theme .cp-payment-detail .pmt-detail-list .pmt-title,
+.dark-theme .cp-payment-detail .pmt-detail-list .pmt-desc,
+.dark-theme .cp-payment-detail .pmt-detail-list .pmt-title,
+.dark-theme .cp-card .card-head .card-title,
+.dark-theme .exchange-desc,
+.dark-theme .exchange-title,
+.dark-theme .save-pincode,
+.dark-theme .modal-sub-title,
+.dark-theme .footer-head,
+.dark-theme .footer-litxt,
+.dark-theme .exchangeMiddlePart .imei-ver .imei-txt,
+.dark-theme .imei-guide,
+.dark-theme .cp-emi-option.popup .accord-heading,
+.dark-theme .cp-view .gallery-top .swiper-pagination-bullet-active,
+.dark-theme .exc-card *,
+.dark-theme .store-name,
+.dark-theme #shopWithVideoContainer,
+.dark-theme #shopWithVideoContainer h1,
+.dark-theme #shopWithVideoContainer h2,
+.dark-theme #shopWithVideoContainer h4,
+.dark-theme #shopWithVideoContainer div,
+.dark-theme #shopWithVideoContainer p,
+.dark-theme .bs-content h2,
+.dark-theme .explore-Service-Modal-Heading,
+.dark-theme .exploreServiceModalMainDiv *,
+.dark-theme .extended-warranty-description p,
+.dark-theme .ewPriceVariant span, 
+.dark-theme .explore-service-modal-protect-service-div *,
+.dark-theme .MuiDialogContent-root .card h1,
+.dark-theme .MuiDialogContent-root .card small,
+.dark-theme .displaysuccess,
+.dark-theme .modal-wrap,
+.dark-theme .shipping-dialog-title,
+.dark-theme .shipping-dialog-subtitle,
+.dark-theme .shipping-label,
+.dark-theme .shipping-dialog-address,
+.dark-theme .add-new-address,
+.dark-theme .cp-radio .cp-radio-item.typ-default input[type=radio]:not(old)+label,
+.dark-theme .header-text-modal,
+.dark-theme .name-wrap *,
+.dark-theme .addressescard *,
+.dark-theme .location-wrap *,
+.dark-theme .contentAccord,
+.dark-theme .MuiDialogContent-root .card span.dot,
+.dark-theme .transaction-history *,
+.dark-theme .btn-rew,
+.dark-theme .form-header,
+.dark-theme .acc-cnt-panel *:not(.formControl),
+.dark-theme .track-status-list *,
+.dark-theme .left-wrap h3,
+.dark-theme .store-card *,
+.dark-theme .store-data .address,
+.dark-theme .store-data .time,
+.dark-theme .offer-heading,
+.dark-theme .cp-payment .amount-offer-wrap .offer-name,
+.dark-theme .store-data .time,
+.dark-theme .tooltip-tnc,
+.dark-theme .bullet-text,
+.dark-theme .paymentOffer-scroll .modal-dock .paymentOffer-title,
+.dark-theme .paymentOffer-scroll .modal-dock .payTitle,
+.dark-theme .paymentOffer-scroll .modal-dock .paymentOffer-subTitle,
+.dark-theme .os-qty,
+.dark-theme .pincode-txt,
+.dark-theme .delivery-text-nopincode,
+.dark-theme .filter-btns *,
+.dark-theme .filter-action-wrap *,
+.dark-theme .btn.btn-icon span,
+.dark-theme .Croma-stores-text,
+.dark-theme .Select-a-store-for-pick,
+.dark-theme .stores-available-text,
+.dark-theme .store-address-pick, 
+.dark-theme .store-timing-pick,
+.dark-theme #exchange-pin,
+.dark-theme .device-details.plan-date span,
+.dark-theme .cp-address .address-list .address-item .address-card .address-head .order-conf-address .billing-user,
+.dark-theme .cart-store-address,
+.dark-theme .MuiMenuItem-root,
+.dark-theme .EWSubhead,
+.dark-theme .ct-head,
+.dark-theme .service-name,
+.dark-theme .tooltip-service-container span p,
+.dark-theme .tooltip-service-title,
+.dark-theme .service-icon-desc-dialog p,
+.dark-theme .recommended-text,
+.dark-theme .offers-section-modal .modal-heading,
+.dark-theme .EWSubhead,
+.companyNameForm .lbl-title,
+.gstComp, 
+.dark-theme .oc-table-cell,
+.dark-theme .os-table-cell,
+.dark-theme .tnc-header,
+.dark-theme #customerRev p,
+.dark-theme .tnc-title,
+.dark-theme .zipNudge,
+.dark-theme .service-icon-desc-dialog li,
+.dark-theme .pdp-special-note p,
+.dark-theme .icon-close-co,
+.dark-theme .cncl-msg,
+.dark-theme .no-store-msg,
+.dark-theme .bulkEnquireyRadioButton,
+.dark-theme .plan-cmp th,
+.dark-theme .plan-cmp h3,
+.dark-theme .plan-cmp td,
+.dark-theme  .bulk-submit,
+.dark-theme .text-ew-msg,
+.dark-theme .offrTitle,
+.dark-theme .removeTitle,
+.dark-theme .or-centerbox,
+.dark-theme .dicount-value,
+.dark-theme .perMnthSDP,
+.dark-theme .perMnthSDP,
+.dark-theme .qik-emi-table-section table.qik-emi-table thead.qik-emi-thead th td,
+.dark-theme .qik-emi-table-section table.qik-emi-table tbody.qik-emi-tbody tr td,
+.dark-theme .perMnthEW {
+    color: var(--text-color) !important;
+}
+
+.dark-theme .form-group .add-on input[type=text],
+.dark-theme span.icon.icon-email.needhelpTxt,
+.dark-theme span.icon.icon-call.needhelpTxt,
+.dark-theme .MuiAutocomplete-inputRoot[class*="MuiInput-root"] .MuiAutocomplete-input:first-child {
+    color: var(--input-color) !important;
+}
+
+.dark-theme .paymentOffer-scroll .modal-dock .cart-offer-title{
+    color: var(--text-color);
+}
+.dark-theme .offr-border{
+    border-color: rgba(53, 53, 53, 0.75) !important;
+}
+
+.dark-theme .accdCart{
+    box-shadow: none !important;
+}
+
+.dark-theme .iconAccordian{
+    color: var(--text-color) !important;
+}
+
+.dark-theme #bordr-cart{
+border-bottom: 1px solid rgba(151, 151, 151, 0.66) !important;
+}
+
+.dark-theme .pay-offer-sticky{
+    background: #383838;
+}
+
+.dark-theme #mobileSticky{
+    background: #383838 !important;
+}
+
+.dark-theme .bs-footer .link:hover,
+.dark-theme .hyperlink-default,
+.dark-theme .billing-button-container>.hyperlink-default
+ {
+    color: var(--hyperlink) !important;
+}
+
+.dark-theme .bs-footer .social .icon:hover.icon-yt {
+    color: #ff0000 !important;
+}
+
+.dark-theme .bs-footer .social .icon:hover.icon-facebook {
+    color: #3b5998 !important;
+}
+
+.dark-theme .bs-footer .social .icon:hover.icon-instagram {
+    color: #e1306c !important;
+}
+
+.dark-theme .bs-footer .social .icon:hover.icon-linkedin {
+    color: #0077b5 !important;
+}
+
+.dark-theme .bs-footer .social .icon:hover.icon-twitter {
+    color: #0077b5 !important;
+}
+
+.dark-theme .bs-content .cp-community .nav {
+    background-color: var(--navbar-carousel-color);
+}
+.dark-theme .MuiSelect-nativeInput {
+    color: #000000 !important;
+}
+
+.dark-theme .bs-content .cp-community .nav *,
+.dark-theme .bs-content .cp-community .lyt-post .cp-form .container * {
+    color: var(--text-color) !important;
+    padding-left: 2px !important;
+}
+
+.dark-theme .cp-privilege .cp-remember,
+.dark-theme .tiles-no-offer,
+.dark-theme .address-foot,
+.dark-theme .cp-address .address-list .set-default,
+.dark-theme .cp-address .address-list .address-card,
+.dark-theme .btn.btn-secondary,
+.dark-theme .cp-account-item-card,
+.dark-theme .cp-product.typ-plp,
+.dark-theme .cp-form,
+.dark-theme .cp-card .card-info,
+.dark-theme .address-foot, .dark-theme .cp-address .address-list .set-default,
+.dark-theme .cp-address .address-list .address-card,
+.dark-theme .exchange-wrap-first,
+.dark-theme #payment_footer_container,
+.dark-theme .MuiDialog-paper .MuiDialogContent-root,
+.dark-theme .mini-cart-product-container .cp-product,
+.dark-theme.mini-cart-dailog,
+.dark-theme .modal-wrap.modal-sm,
+.dark-theme .modal-wrap.modal-md,
+.dark-theme .menu-list,
+.dark-theme .nav-tab,
+.dark-theme .display-grid-template,
+.dark-theme .nav-tab:before,
+.dark-theme .header-store-detail-modal,
+.dark-theme .cp-compare .compare-product,
+.dark-theme .cp-card,
+.dark-theme .pdp-pincode-modal,
+.dark-theme .displayPincodeBox,
+.dark-theme .cp-listing .filter-action-wrap,
+.dark-theme .cp-listing .filter-btns,
+.dark-theme .bs-content .height-adjust,
+.dark-theme .cp-section.first,
+.dark-theme .cp-section,
+.dark-theme .dialogSlp,
+.dark-theme .containerSlp,
+.dark-theme .justify-content-between,
+.dark-theme .cp-view .gallery-top .swiper-slide,
+.dark-theme .exchange-model,
+.dark-theme .modal-footer,
+.dark-theme .pdp-modal-emi,
+.dark-theme.MuiDialog-paper-list-address-store,
+.dark-theme.MuiDialog-paper-add-edit-dialog,
+.dark-theme .cp-account-item-card, .dark-theme .cp-wishlist .wishlist-list .wishlist-item .p-list .p-item .cp-product.typ-plp .offer-shipping-wrap .offer-band,
+.dark-theme .header-store-enquiry,
+.dark-theme #newInstant,
+.dark-theme .order-list-plan .accordian-item.accrordTest,
+/* .dark-theme .explore-service-modal-protect-service-main-div, */
+.dark-theme .exploreServiceModal,
+.dark-theme .MuiDialog-paper-add-edit-dialog,
+/* .dark-theme .MuiDialog-paper-add-edit-dialog *, */
+.dark-theme .MuiDialogContent-root,
+.dark-theme .cart-store-item,
+.dark-theme .write-review .tab-title,
+.dark-theme .rating-area-right span,
+.dark-theme .cart-stores-text {
+    box-shadow: none !important;
+    background-color: var(--croma-wall) !important;
+    color: var(--text-color) !important;
+}
+.dark-theme #homedatael .cp-product,
+.dark-theme .order-confirmation,
+.dark-theme .cp-product {
+    box-shadow: none !important;
+    background-color: #1e1e1e ;
+    color: var(--text-color) !important;
+}
+.dark-theme .cart-store-item {
+    border-radius: 4px !important;
+    border: solid 1px #353535; 
+}
+
+.dark-theme .btn.typ-big {
+    border: 1px solid #fff !important;
+}
+
+.dark-theme .btn.btn-link,
+.dark-theme .btn.btn-link:hover{
+    color: #fff;
+}
+.dark-theme .old-price .amount {
+    color: var(--old-price) !important;
+}
+
+.dark-theme .bs-footer {
+    background-color: var(--foot-color);
+}
+
+.dark-theme .bs-footer .icon-back,
+.dark-theme .pod-button,
+.dark-theme #homedatael .cp-think .think-title span input,
+.dark-theme #nullsearchdatael .cp-think .think-title span input {
+    color: var(--croma-wall) !important;
+}
+
+.dark-theme .viewall-btn-wrap .btn-secondary:hover {
+    color: var(--hyperlink) !important;
+    text-decoration: underline;
+    text-transform: none;
+}
+
+
+.dark-theme .btn.btn-viewmore.view-more-service,
+.dark-theme button .emailInvoice {
+    color: var(--hyperlink) !important;
+}
+.dark-theme .create-now-text,
+.dark-theme .btn-resend.active,
+.dark-theme .terms,
+.dark-theme .card-subtitle a {
+    color: #00e9bf !important;
+    text-decoration: underline;
+}
+.dark-theme .login-button{
+    color: #00e9bf !important;
+}
+.dark-theme #cpMsd:hover {
+    border: 3px solid var(--hyperlink);
+}
+
+.dark-theme .MuiDialog-paper .icon-close{
+    color:#ffffff;
+}
+
+.dark-theme .MuiRating-iconEmpty {
+    color: var(--old-price);
+}
+
+.dark-theme .icon-instagram:before {
+    content: url("https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png,h_20,w_20/v1639657222/insta_before_v2nnfx.png");
+}
+
+.dark-theme .cp-product.typ-plp .offer-band,
+.dark-theme .cp-product.typ-plp .discount,
+.dark-theme .cp-ship-opt,
+.dark-theme .cart-price,
+.dark-theme .category,
+.dark-theme .btn.btn-secondary,
+.dark-theme .btn.btn-viewmore.view-more-service,
+.dark-theme .btn.btn-secondary.btn-transparent {
+    border: var(--navbar-carousel-color) 1px solid;
+    color: var(--text-color) !important;
+    background-color: var(--croma-wall) !important;
+}
+.dark-theme .cp-price.discount{
+    border-top: var(--navbar-carousel-color) 1px solid !important;
+}
+.dark-theme .cp-price.main-product-price{
+    color: var(--text-color) !important;
+    background-color: var(--croma-wall) !important;
+}
+.dark-theme .MuiDialogContent-root .card{
+    border: var(--navbar-carousel-color) 1px solid;
+    border-radius: 8px;
+    color: var(--text-color);
+    background-color: var(--croma-wall) !important;
+    box-shadow: none;
+}
+
+.dark-theme .btn.btn-secondary.btn-transparent span.add-to-cart-text {
+    color: var(--text-color) !important;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.dark-theme .btn.btn-secondary.btn-transparent.combo-to-cart-disable {
+    border: solid 1px #353535 !important;
+}
+.dark-theme .btn.btn-secondary.btn-transparent.combo-to-cart-disable span.add-to-cart-text {
+    color: var(--navbar-carousel-color) !important;
+}
+
+.dark-theme .btn.btn-viewmore.view-more-service {
+    border-color: var(--text-color) !important;
+    color: var(--hyperlink) !important;
+}
+.dark-theme .btn-viewmore-click{
+    color: var(--text-color) !important;  
+    border-color: var(--text-color) !important;
+}
+.dark-theme .btn-secondary {
+    border-color: var(--text-color) !important;
+    color: var(--text-color) !important;
+}
+
+.dark-theme .cp-checkbox .cp-checkbox-item.typ-radio input[type="checkbox"]:not(old)+label .check , .paymentOffer-radioButton {
+    border-color: var(--circle) !important;
+}
+
+.dark-theme .cart-coupon-apply-btn {
+    background-image: var(--text-color) !important;
+    background: var(--text-color) !important;
+    color: var(--croma-wall) !important;
+}
+
+/* compare style */
+.dark-theme .cp-features .f-title {
+    color: var(--text-color) !important;
+    background-color: var(--croma-wall) !important;
+}
+
+.dark-theme .cp-compare-result.active {
+    color: var(--navbar-carousel-color) !important;
+    background-color: var(--croma-wall) !important;
+}
+
+.dark-theme .bs-header .bottom-band .navbar .user-account {
+    background: var(--hyperlink) !important;
+}
+
+.dark-theme .cp-my-orders .cp-card .card-info {
+    background-color: var(--croma-wall) !important;
+}
+
+.dark-theme .btn.btn-default.disabled {
+    background: var( --navbar-carousel-color) !important;
+    border-color: var( --navbar-carousel-color) !important;
+    color: #a1a1a1;
+    }
+
+.dark-theme .swiper-pagination-clickable .swiper-pagination-bullet {
+    /* border: 1.5px solid #fff; */
+    background: #ababab;
+    opacity: 1;
+}
+
+.dark-theme .explore-hover, .dark-theme .explore-hover:hover {
+    color: var(--hyperlink) !important;
+    text-decoration: underline;
+}
+
+.dark-theme #cust-details-swv {
+    border: none !important;
+}
+
+.dark-theme .mobile-input-box {
+    background-color: var(--croma-wall);
+    border-color: var(--hyperlink);
+    color: var(--text-color);
+}
+
+.dark-theme button.btn.btn-link.exchange-change-button {
+    color: #00e9bf !important;
+    text-decoration: underline;
+}
+
+.dark-theme .updateEmail .text,
+.dark-theme .text-msg span.text {
+    color: var(--text-color) !important;
+}
+
+.dark-theme .cp-listing .two-col-rignt .product-list .product-item,
+.dark-theme .cp-listing .two-col-rignt .sidebar,
+.dark-theme .cp-listing .two-col-rignt .applied-filter,
+.dark-theme .cp-view .cp-checkbox {
+    border-color: var(--navbar-carousel-color) !important;
+}
+.dark-theme .btn.disable-btn-in-pdp{
+    color: #a1a1a1 !important;
+    background-color: #353535 !important;
+    border: none;
+}
+.dark-theme .cp-keyfeature.pd-eligibility-wrap ul li::marker{
+    color: #ffffff; 
+  }
+.dark-theme .btn.disable-btn-in-pdp-cart{
+    color: #a1a1a1 !important;
+    background-color: #353535 !important;
+    border-color: var(--text-color) !important;
+}
+.dark-theme .btn.disable-btn-in-pdp-cart:hover{
+    border-color: var(--text-color) !important;
+}
+.dark-theme #add_to_cart_button_container .btn.btn-secondary:hover{
+    color: var(--neon-green) !important;
+    border: var(--neon-green) 1px solid !important;
+}
+/* .dark-theme #add_to_cart_button_container .btn.btn-default{
+    color: #000 !important;
+} */
+.dark-theme .buyNowBtn {
+    color: var(--croma-wall) !important;
+}
+
+.dark-theme .typ-plp .action-wrap .btn.btn-secondary:hover{
+    color: var(--neon-green);
+    border: var(--neon-green) 1px solid;
+}
+.dark-theme .typ-plp .action-wrap .btn.btn-default{
+    color: #000 !important;
+}
+
+ .dark-theme .cp-brands,
+.dark-theme .cp-brand-category-home,
+.dark-theme .cp-checkout .checkout-list .checkout-item .cp-box,
+.dark-theme .cart-coupon-box,
+.dark-theme .mod-summary .cp-box,
+.dark-theme .offer-section-pdp .offer-box,
+.dark-theme .cp-product.typ-plp.plan-card-info,
+.dark-theme .offer-section-pdp .offer-selected-pdp,
+.dark-theme .mod-summary .cp-product.typ-plp.typ-cart,
+.dark-theme .checkout-item .cp-product.typ-plp.checkoutLoader.shipping-information,
+.dark-theme .shipping-dialog-list-data,
+.dark-theme .p-item,
+.dark-theme .cp-account-item-card {
+    padding-bottom: 1%!important;
+    box-shadow: none!important;
+    border: solid 1px var(--navbar-carousel-color)!important;
+    border-radius: 8px!important;
+}
+.dark-theme .cp-product.typ-plp.typ-cart.cart-product-details {
+    box-shadow: none!important;
+    border-bottom: solid 1px var(--navbar-carousel-color)!important;
+    /* border-radius: 8px!important; */
+}
+.dark-theme .cp-product.typ-plp.typ-cart.cart-product-details .offers-section-cart, 
+.dark-theme .cp-product.typ-plp.typ-cart.cart-product-details .vas-delivery,
+.dark-theme .cp-product.typ-plp.typ-cart.cart-product-details .upgrade-plan {
+    background-color: #3c3c3c;
+}
+.dark-theme .offers-section-cart .offers-applied-text, .dark-theme .upgrade-plan-text p {
+    color: #fff;
+}
+.dark-theme .offers-section-cart .applied-offer-cart-ul li {
+    color: #fff;
+}
+.dark-theme .shipping-dialog-list-data.activated,
+.dark-theme .cart-store-highlight-box {
+    border: 1px solid #48a7a3 !important;
+}
+.dark-theme .payment-accordian{
+    box-shadow: none!important;
+    border-radius: 8px!important;
+    background-color: var(--navbar-carousel-color)!important;
+}
+.dark-theme .paymentOffer-radioButton,
+.dark-theme .think-apply{
+    border-color: var(--neon-green) !important;
+}
+.dark-theme .paymentOffer-scroll ::-webkit-scrollbar-thumb{
+    background: var(--neon-green) !important;
+}
+.dark-theme .cp-my-orders .cp-product .product-info .estimate p, 
+.dark-theme .cp-my-orders .cp-card .order-list .order-list-item .cp-product .action-wrap a:hover,
+.dark-theme .cp-my-orders .cp-card .order-list .order-list-item .cp-product .action-wrap button:hover,
+.dark-theme .think-apply {
+    color: var(--neon-green) !important;
+}
+.dark-theme .cp-track-infograph .track-status-list .track-status-item.done:before,
+.dark-theme .line-green,
+.dark-theme .cp-track-infograph .track-status-list .track-status-item.done:after,
+.dark-theme .cp-track-infograph .track-status-list .track-status-item.active:before
+ {
+    background-color: var(--neon-green) !important;
+    color: var(--croma-wall) !important;
+}
+.dark-theme .cp-my-orders .cp-product .action-wrap {
+    border-top: 1px solid var(--text-color) !important;
+}
+.dark-theme .cp-my-orders .order-list .order-list-item .action-wrap.typ-primary{
+    border-top:none !important ;
+}
+
+.dark-theme .cp-my-orders .order-list .order-list-item {
+    border-bottom: 1px solid var(--text-color) !important;
+}
+.dark-theme .cp-my-orders .order-list .order-list-item {
+    /* position: relative; */
+    border-bottom: 1px solid #e2e2e2!important;
+}
+@media only screen and (min-width: 1027px){
+.dark-theme .cp-checkout .checkout-list .checkout-item .chk-btn-panel {
+    box-shadow: none;
+    border: none !important;
+}
+} 
+
+.dark-theme .gstButton:disabled, 
+.dark-theme .disable-btn-secondary{
+  border: solid 1px #353535 !important;
+  color:var(--navbar-carousel-color) !important
+}
+
+.dark-theme .shipping-radio {
+    color:#808080 !important;
+  }
+
+  /* .dark-theme .btn.disable-btn-in-pdp, 
+  .dark-theme .btn.disable-btn-in-pdp{
+    background: #a1a1a1 !important;
+    color: #b7b7b7 !important;
+    border-color: #a1a1a1!important;
+  } */
+@media only screen and (max-width: 1024px){
+    .dark-theme .cp-listing .two-col-rignt .sidebar .filter-by:before {
+        width: 0% !important;
+    }
+    .dark-theme .cp-listing .filter-action-wrap .icon-text .icon:before, .cp-listing .filter-btns .icon-text .icon:before{
+        font-weight: 700 !important;
+    }
+    .cp-listing .two-col-rignt .sidebar .filter-by .cp-accordian .accordian-item {
+        margin: 0 !important;
+    }
+
+    .cp-listing .two-col-rignt .sidebar .filter-by .cp-accordian .MuiExpansionPanelSummary-root {
+        border-bottom: 1px solid var(--navbar-carousel-color);
+        border-right: 1px solid var(--navbar-carousel-color);
+    }
+
+    .sort-by-category .search-wrap .text-input {
+        border-radius: 0 !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: 1px solid var(--navbar-carousel-color) !important;
+        border-left: 1px solid var(--navbar-carousel-color) !important;
+    }
+}
+.dark-theme .card-info .order-id .order-id-desc,
+.dark-theme .cp-payment-detail .pmt-detail-list .pmt-title .orderConfirmPin,
+.dark-theme .cp-address .address-list h3{
+    color: var(--neon-green);
+}
+
+.dark-theme .cp-product .order-conf-prod-info .product-title a:hover{
+    color: var(--hyperlink);
+}
+
+
+.dark-theme .address-card {
+    border: 2px solid #353535;
+    border-radius: 0.5rem !important;
+}
+ .dark-theme .wishlist-item .disable-btn-in-pdp {
+    background: transparent !important;
+    color: #353535!important;
+    border-color: #353535!important;
+}
+
+@media only screen and (max-width: 767px) {
+    .dark-theme .cp-think .icon-wrap .icon {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+}
+
+.dark-theme .cart-coupon-box,
+.dark-theme .store-info-box-container {
+    box-shadow: none;
+    border: solid 1px #353535;
+    border-radius: 8px;
+}
+
+.dark-theme .cp-sec-sideBar .side-bar .mod-summary .cp-box {
+    box-shadow: none;
+    border: solid 1px #353535;
+    border-radius: 8px;
+}
+
+.dark-theme .cp-cart .cp-product .product-wrap .product-info .iconDelete {
+    color: #00e9bf;
+}
+
+.dark-theme .deliver-container .threehr-pincode-change,
+.dark-theme .another-store .btn-link{
+    color: #00c09e !important;
+}
+.dark-theme .another-store .btn-link {
+    text-decoration: underline;
+}
+.dark-theme .home-delivery .icon {
+    color: #00e9bf !important;
+}
+
+.dark-theme .cp-radio .cp-radio-item.typ-default input[type=radio]:not(old):checked+label .check {
+    border: solid 1px #ffffff !important;
+}
+
+.dark-theme .cp-radio .cp-radio-item.typ-default input[type=radio]:not(old)+label .check:before {
+    color: #00e9bf!important;
+}
+
+.dark-theme .cp-radio .cp-radio-item.typ-default input[type=radio]:not(old)+label .check {
+    border: solid 1px #808080 !important;
+}
+
+.dark-theme .deliver-container .threehr-pincode {
+    color: #00e9bf !important;
+}
+
+.dark-theme .mod-summary .payment-summary table tr td .pin {
+    color: #00e9bf !important;
+}
+
+.dark-theme .loader{
+    background: var(--foot-color) !important;
+}
+
+.dark-theme .loader .img{
+    background: url(/assets/images/loder.gif) no-repeat 50% #000000;
+    background-size: 75%;
+    border: 2px solid #353535;
+}
+
+.dark-theme .cp-listing .two-col-rignt .text-input{
+    color: #ffffff;
+}
+
+.dark-theme .bs-content .static-nav {
+    background-color: var(--croma-wall) !important;
+    box-shadow: none !important;
+}
+/* .dark-theme .disable-btn-in-pdp.disableCartBtn{
+    background-color: #000!important;
+    color: #353535 !important;
+    border: solid 1px #353535 !important;
+} */
+.dark-theme .exchange-wrap {
+    box-shadow: none;
+    border: solid 1px #353535;
+}
+
+.dark-theme .offers-section-modal  .modal,
+.dark-theme .offer-section-pdp .offer-box-cart{
+    background-color: var(--croma-wall) !important;
+    
+}
+
+.dark-theme .offer-section-pdp .offer-box-cart{
+    box-shadow: none;
+    border: solid 1px #353535;
+    margin: 0 2rem;
+    border-radius: 8px;
+}
+.dark-theme .apply-text {
+    color: var(--text-color) !important;
+}
+.dark-theme .MuiDialogContent-root {
+    border-radius: 8px !important;
+}
+.dark-theme .apply-background {
+    padding-bottom: 25px ;
+}
+.dark-theme .border-bottom-dotted {
+    display: none !important;
+}
+.dark-theme .back-to-cart a {
+    color: #00e9bf;
+    text-decoration: underline;
+}
+.dark-theme .payIconPlus::before{
+    color: var(--neon-green) !important;
+}
+.dark-theme .plusMinusIcon::before{
+    color: var(--neon-green) !important;
+}
+.dark-theme .gst-buttons .shipping-button:hover {
+    border: none !important;
+}
+.dark-theme .icon-wrap.deliverymode-zip-pdp.zip-delivery-pdp{
+    padding-right: 5px !important;
+}
+.dark-theme .icon-wrap.deliverymode-zip-pdp{
+    padding-right: 5px !important;
+}
+.dark-theme .icon-wrap.store-pickup-icon-wrap-pdp{
+    margin-top: 0%;
+}
+.dark-theme .upgrade-plan-icon {
+    filter: unset;
+}
+
+.pdp-icon-res {
+    height: 25px;
+    width: 25px;
+}
+/* .dark-theme .store-text-pdp{
+    margin-left: 5px
+} */
+.dark-theme .deliveryoptions-box-pdp{
+    background-color: #353535 !important;
+    border: unset !important;
+}
+
+@media only screen and (max-width: 767px){
+    .dark-theme .cp-ship-opt .cp-icon-text, .cp-ship-opt .cp-icon-text .icon-wrap {
+        text-align: left;
+        /* align-items: center; */
+    }
+    .dark-theme .del-date1{
+        margin-left: 20px;
+    }
+    .dark-theme .icon-wrap.deliverymode-zip-pdp.zip-delivery-pdp {
+        margin-right: auto;
+    }
+    /* .dark-theme .store-pickup-icon-wrap-pdp {
+        margin: auto
+    } */
+    .dark-theme .icon-wrap.store-pickup-icon-wrap-pdp{
+        /* margin-top: 3%; */
+        /* align-items: center; */
+        justify-content: center;
+        display: flex;
+    }
+    .dark-theme .accdCart{
+        background: #383838 !important;
+    }
+}
+
+.dark-theme .ship-store-add,
+.dark-theme .os-product-details > div,
+.dark-theme #panelOrderbh-content .product-details div {
+    border-bottom: 1px solid var(--navbar-carousel-color) !important;
+}
+
+.dark-theme .mod-summary .payment-summary table tr.total,
+.dark-theme .payment-net-amt,
+.dark-theme .cp-checkout .checkout-list .checkout-item .payment-summary table tr.total{
+    border-color: var(--navbar-carousel-color) !important;
+}
+
+.dark-theme .add-new{
+    color: var(--hyperlink) !important;
+}
+
+.dark-theme .form-list .list>.item .cp-checkbox .cp-checkbox-item label .disTxt,
+.dark-theme .disTxt{
+    color: #626262 !important;
+}
+
+.dark-theme .cp-checkbox .cp-checkbox-item input[type=checkbox][disabled]:not(old)+label .check{
+    border: .1rem solid #626262 !important ;
+}
+.dark-theme .cp-offer {
+    border: 1px solid var(--text-color);
+}
+.dark-theme .status-content-gray {
+    border: 1px solid var(--text-color);
+}
+.dark-theme .status-content-gray .device-status-text {
+    color: var(--text-color);
+}
+
+.dark-theme .cp-my-orders .order-list .order-list-item.separator {
+    border-bottom: none !important;
+}
+.dark-theme .plan-cmp h2{
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-color) !important;
+    margin-bottom: 5.5rem;
+}
+.dark-theme .offer-section-pdp .combo-price-text {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #ff02b9 !important;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.6rem 0;
+    text-align: center; 
+}
+.dark-theme .offer-section-pdp .unselect-combo-tile,
+.dark-theme .offer-section-pdp .combo-tile{
+    border: 1px solid #ff02b9 !important;
+    background: #000000 !important;
+    border-radius: 0.4rem;
+}
+.dark-theme .cp-my-orders .cp-product .action-wrap.track-sr-custom {
+    border-top: none !important;
+}
+.dark-theme .MuiAutocomplete-option[data-focus="true"] {
+    background-color:#f2f2f2 !important;
+}
+.dark-theme .recEW {
+    border: 1px solid white;
+    }
+.dark-theme .service-icon-desc-dialog {
+    background-color: #616161 !important;
+}
+.dark-theme .MuiPickersBasePicker-pickerView{
+    color: #616161!important
+}
+.dark-theme .MuiPickersYearSelection-container{
+    color: #616161!important
+}
+
+.dark-theme .MuiPickersMonthSelection-container{
+    color: #616161!important
+}
+
+/* 2021 Unbox CSS - START */
+/* div[data-testid="category-nav-list-items"] div.swiper-slide:first-child img{
+    width: 98px !important;
+    height: 21px !important;
+    margin-top: 5px;
+}
+#homedatael div[data-testid=category-nav-list-items] div.swiper-slide:first-child {
+    width: 85px !important;
+    margin-right: 52.5px !important;
+}
+@media only screen and (max-width: 767px) {
+    div[data-testid="category-nav-list-items"] div.swiper-slide:first-child img{
+        width: 70px!important;
+        height: 15px!important;
+        margin-top: 10px;
+    }
+    #homedatael div[data-testid=category-nav-list-items] div.swiper-slide:first-child {
+        margin-right: 97.5px !important;
+        width: 0 !important;
+
+    }
+    .dark-theme #panel0bh-content .accordian-content{
+        height: max-content;
+    }
+} */
+/* 2021 Unbox CSS - END */
+
+/* .dark-theme .vas-delivery{
+    background: var(--croma-wall) !important;   
+    border: 0.5px solid rgba(255, 255, 255, 0.6);
+} */
+.dark-theme .cp-cart .vas-delivery .extended-warranty .updateEmail .text-email{
+    color: var(--text-color);
+}
+.dark-theme .cp-cart .vas-delivery .extended-warranty .updateEmail .updateEmailBtn, .dark-theme .offers-section-cart .view-all, .dark-theme .upgrade-plan-btn button{
+    color: #00e9bf;
+}
+.dark-theme .cp-cart .cp-product .product-sec {
+    padding: 10px 0 10px 17px;
+}
+@media only screen and (max-width: 480px){
+    .dark-theme .vas-delivery{
+        border-radius: unset;
+    }
+}
+.dark-theme .explore-service-modal-protect-buynow-active-button {
+    background-color: #353535 !important;
+    color: #a1a1a1 !important;
+    border-color: #353535 !important;
+}
+.dark-theme .icon-device:before {
+    content: url('https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png,h_18,w_18/v1641280857/Croma%20Assets/DUpload/bkls0a6yvf0iqjal1e0x.svg');
+}
+.dark-theme .icon-deviceDesk:before {
+    content: url('https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png,h_30,w_30/v1641280857/Croma%20Assets/DUpload/bkls0a6yvf0iqjal1e0x.svg');
+}
+@media only screen and (max-width: 767px) {
+	.icon-device:before {
+		content: url('https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png,h_25,w_25/v1641280857/Croma%20Assets/DUpload/bkls0a6yvf0iqjal1e0x.svg') !important;
+		width: 25px;
+		height: 25px;
+		padding: 0;
+		margin: 0
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.icon-device:before {
+		content: url('https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png,h_25,w_25/v1641280857/Croma%20Assets/DUpload/bkls0a6yvf0iqjal1e0x.svg') !important;
+		width: 25px;
+		height: 25px;
+		padding: 0;
+		margin: 0
+	}
+    .cp-view .gallery-top .swiper-pagination-bullet-active {
+        background: #00e9bf !important;
+    }
+}
+.dark-theme .acc-cnt-panel-bulk-enquiry {
+    color: #000 !important;
+}
+
+@media only screen and (min-width: 1920px) {
+    .dark-theme .home-page-footer-content,
+    #pin-store-header,
+    .top-band {
+        width : 145rem !important;
+        margin : 0 auto !important;
+    }
+    .bs-header-s-custom {
+        background-color: #000 !important;
+    }
+    .dark-theme .home-app-rotational-banner {
+        width : 145rem !important;
+        margin : 0 auto !important;
+        height: 39rem !important;
+    }
+    }
+
+/**** EMI modal style changes ****/
+.dark-theme .cp-emi-option .cp-accordian .accordian-content {
+    width: auto;
+    padding: 0 3rem;
+    background: #000;
+}
+.dark-theme .cp-emi-option .MuiExpansionPanel-root.Mui-expanded {
+    border-color: #000 !important;
+}
+.dark-theme .cp-emi-option .cp-accordian table {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+    .dark-theme .plan-cmp td,
+.dark-theme .plan-cmp th,
+.dark-theme .plan-cmp tr {
+    border: 1px solid #979797;
+    background: var(--croma-wall) !important;
+    vertical-align: middle;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+        .dark-theme .cp-category-nav {
+            margin-top: 11.1rem;
+        }
+        }
+.dark-theme .scrollbar li.MuiAutocomplete-option {
+    background: transparent !important;
+    color: #fff !important;
+}
+.dark-theme .recent-search-field {
+    background-color: #181818 !important;
+    opacity: 0.98 !important;
+}
+.dark-theme .scrollbar li:last-child.MuiAutocomplete-option, .dark-theme .scrollbar li:first-child.MuiAutocomplete-option {
+    display: block !important;
+}
+.dark-theme .scrollbar .MuiAutocomplete-option[data-focus="true"] {
+    background-color: transparent !important;
+    /* border-radius: 10px; */
+}
